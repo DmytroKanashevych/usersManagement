@@ -4,7 +4,7 @@ component {
     this.sessionManagement = true;
     this.sessionTimeout = createTimeSpan(0, 0, 60, 0);
     this.setClientCookies = true;
-    this.datasource = "usersManagement";
+    this.datasource = "management";
 
     public boolean function onApplicationStart() {
         application.users = [];
