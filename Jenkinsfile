@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DEPLOY_SERVER = 'ec2-54-91-35-165.compute-1.amazonaws.com'
-        DEPLOY_USER = 'ubuntu'
+        DEPLOY_USER = 'nobody'
         DEPLOY_PATH = '/opt/coldfusion2023/cfusion/wwwroot'
     }
 
