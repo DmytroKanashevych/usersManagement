@@ -25,18 +25,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Restart ColdFusion') {
-            steps {
-                sshagent(credentials: ['ab34997f-4705-4263-be0e-c26e97d377cf']) {
-                    script {
-                        sh """
-                            ssh ${DEPLOY_USER}@${DEPLOY_SERVER} 'sudo systemctl restart coldfusion2023'
-                        """
-                    }
-                }
-            }
-        }
     }
 
     post {
