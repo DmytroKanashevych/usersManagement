@@ -16,8 +16,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                // Деплой через SSH
-                sshagent() {
+                sshagent(credentials: ['ab34997f-4705-4263-be0e-c26e97d377cf']) {
                     script {
                         sh """
                             scp -r * ${DEPLOY_USER}@${DEPLOY_SERVER}:${DEPLOY_PATH}
@@ -29,7 +28,7 @@ pipeline {
 
         stage('Restart ColdFusion') {
             steps {
-                sshagent() {
+                sshagent(credentials: ['ab34997f-4705-4263-be0e-c26e97d377cf']) {
                     script {
                         sh """
                             ssh ${DEPLOY_USER}@${DEPLOY_SERVER} 'sudo systemctl restart coldfusion2023'
@@ -42,7 +41,7 @@ pipeline {
 
     post {
         success {
-            echo 'Deploy is done!'
+            echo 'Deployed successfully!'
         }
         failure {
             echo 'Something went wrong!'
