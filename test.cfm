@@ -4,12 +4,13 @@
 
 <cfquery name="createUsersTable">
     CREATE TABLE users (
-        id INT AUTO_INCREMENT PRIMARY KEY,
+        id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL,
-        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     );
 </cfquery>
+
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
