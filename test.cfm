@@ -1,6 +1,15 @@
 <cfset request.pageTitle = "Local users">
 
 <cfinclude template = "./includes/header.cfm">
+
+<cfquery name="createUsersTable">
+    CREATE TABLE users (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+</cfquery>
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
