@@ -16,7 +16,7 @@
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link <cfif Right(CGI.SCRIPT_NAME, Len('index.cfm')) eq 'index.cfm'>active</cfif>" aria-current="page" href="index.cfm">Users in database</a>
-                    <a class="nav-link <cfif Right(CGI.SCRIPT_NAME, Len('test.cfm')) eq 'test.cfm'>active</cfif>" aria-current="page" href="test.cfm">Users in session storage</a>
+                    <a class="nav-link <cfif Right(CGI.SCRIPT_NAME, Len('localUsers.cfm')) eq 'localUsers.cfm'>active</cfif>" aria-current="page" href="localUsers.cfm">Users in session storage</a>
                 </div>
           </div>
         </div>
