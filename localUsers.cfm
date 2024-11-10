@@ -31,7 +31,7 @@
         <th class="col-3">Email</th>
         <th class="col-1">Actions</th>
       </tr>
-<cfloop array = "#session.users#" index = "user">
+  <cfloop array = "#session.users#" index = "user">
       <tr>
         <td> 
           <cfoutput>#user.id#</cfoutput>
@@ -67,9 +67,9 @@
           </a>
         </td>
       </tr>
-</cfloop>
+  </cfloop>
 </table>
-<cfif structKeyExists(session, "users") AND arrayLen(session.users) LT 0>
+  <cfif structKeyExists(session, "users") AND arrayLen(session.users) LT 0>
     <p>No users found in session memory.</p>
-</cfif>
+  </cfif>
 <cfinclude template = "./includes/footer.cfm">
