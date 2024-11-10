@@ -19,7 +19,7 @@ pipeline {
                 sshagent(credentials: ['ab34997f-4705-4263-be0e-c26e97d377cf']) {
                     script {
                         sh """
-                            scp -r * ${DEPLOY_USER}@${DEPLOY_SERVER}:${DEPLOY_PATH}
+                            scp -o StrictHostKeyChecking=no -r * ${DEPLOY_USER}@${DEPLOY_SERVER}:${DEPLOY_PATH}
                         """
                     }
                 }
