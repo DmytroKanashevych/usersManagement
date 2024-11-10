@@ -13,5 +13,5 @@
     <cfif userIndex NEQ -1>
         <cfset arrayDeleteAt(session.users, userIndex)>
     </cfif>
-    <cflocation url = "../test.cfm">
+    <cflocation url = "../localUsers.cfm">
 </cfif>

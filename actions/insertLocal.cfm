@@ -5,5 +5,5 @@
     <cfset newUser = {"id" = createUUID(), "name" = form.name, "email" = form.email}>
     <cfset arrayAppend(session.users, newUser)>
 
-    <cflocation url = "../test.cfm">
+    <cflocation url = "../localUsers.cfm">
 </cfif>

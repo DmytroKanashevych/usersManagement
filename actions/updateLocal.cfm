@@ -15,5 +15,5 @@
     <cfelse>
         <cfset request.errorMessage = "User not found.">
     </cfif>
-    <cflocation url = "../test.cfm">
+    <cflocation url = "../localUsers.cfm">
 </cfif>
