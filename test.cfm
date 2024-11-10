@@ -11,6 +11,13 @@
     );
 </cfquery>
 
+<cfquery name="users">
+  CREATE TABLE users (
+    id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+)
+</cfquery>
 <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-6 col-lg-4">
