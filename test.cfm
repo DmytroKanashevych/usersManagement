@@ -2,15 +2,6 @@
 
 <cfinclude template = "./includes/header.cfm">
 
-<cfquery name="createUsersTable">
-    CREATE TABLE users (
-        id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
-        name VARCHAR(255) NOT NULL,
-        email VARCHAR(255) NOT NULL,
-        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );
-</cfquery>
-
 <cfquery name="users">
   CREATE TABLE users (
     id INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
